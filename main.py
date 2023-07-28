@@ -1,7 +1,7 @@
 # Library Imports
 from fastapi import FastAPI
 from diffusers import StableDiffusionPipeline, DPMSolverMultistepScheduler
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 import logging
 
 # App Definition
@@ -20,8 +20,8 @@ pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
 # pipe = pipe.to("cuda")
 
 # API Endpoint
-@app.get("/vector_image")
-def image_endpoint(prompt, num_inference_steps: int = 3):
+@app.get("/generate_image")
+def generate_image(prompt, num_inference_steps: int = 3):
     """
     This endpoint takes a text prompt as input and returns an image.
 
@@ -46,6 +46,26 @@ def image_endpoint(prompt, num_inference_steps: int = 3):
 def health_check():
     """
     This endpoint is a health check for the API.
+
+    Args:
+        None
+
+    Returns:
+        dict: Health check response.
     """
 
     return {"msg": "Hello World"}
+
+@app.get("/")
+def root():
+    """
+    This endpoint redirects to the API documentation.
+
+    Args:
+        None
+
+    Returns:
+        RedirectResponse: Redirect to API documentation.
+    """
+
+    return RedirectResponse("/docs")
