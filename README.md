@@ -49,7 +49,7 @@ uvicorn main:app --port 8080 --reload
 ```
 **2. To make calls to the API using CURL (prompt: photo of an astronaut riding a horse on mars):**  
 ```
-curl -X 'GET' 'http://text-to-image-microservice.azurewebsites.net/vector_image/?prompt=photo%20of%20an%20astronaut%20riding%20a%20horse%20on%20mars' -H 'accept: application/json' -o "photo.png"
+curl -X 'GET' 'http://text-to-image-microservice.azurewebsites.net/generate_image/?prompt=photo%20of%20an%20astronaut%20riding%20a%20horse%20on%20mars' -H 'accept: application/json' -o "photo.png"
 ```
 
 ## Project Structure
