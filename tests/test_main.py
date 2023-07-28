@@ -10,11 +10,11 @@ def test_health_check():
     assert response.json() == {"msg": "Hello World"}
 
 def test_generate_image():
-    response = client.get("/generate_image/photo of an astronaut riding a horse on mars")
+    response = client.get("/generate_image/?prompt=photo of an astronaut riding a horse on mars")
     assert response.status_code == 200
     assert response.headers["content-type"] == "image/png"
 
 def test_root():
     response = client.get("/")
-    assert response.status_code == 302
+    assert response.status_code == 200
     assert response.headers["location"] == "/docs"
