@@ -1,4 +1,4 @@
-[![Python Continuous Integration](https://github.com/architkailas/Text-To-Image-MircoService/actions/workflows/main_text-to-image-microservice.yml/badge.svg)](https://github.com/architkaila/Text-To-Image-MircoService/actions/workflows/main_text-to-image-microservice.yml)
+[![Python Continuous Integration](https://github.com/architkaila/Text-To-Image-MircoService/actions/workflows/main_text-to-image-microservice.yml/badge.svg)](https://github.com/architkaila/Text-To-Image-MircoService/actions/workflows/main_text-to-image-microservice.yml)
 
 # Text To Image MircoService
 > #### _Archit, Shen, Shrey | Summer '23 | Duke AIPI 561 MLOps Final Project_
