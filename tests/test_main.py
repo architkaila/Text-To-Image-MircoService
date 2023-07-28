@@ -14,7 +14,7 @@ def test_generate_image():
     assert response.status_code == 200
     assert response.headers["content-type"] == "image/png"
 
-def test_root(self):
+def test_root():
     response = client.get("/")
     assert response.status_code == 302
     assert response.headers["location"] == "/docs"
